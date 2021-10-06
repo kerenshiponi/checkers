@@ -1,0 +1,38 @@
+td.black{
+  background-color: rgb(243, 106, 158);
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  position: relative;
+}
+
+td.white {
+  background-color: white;
+  width: 65px;
+  height: 65px;
+  border: 1px black;
+}
+
+.blackpiece {
+  border-radius: 50%;
+  background-color: black;
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+.whitepiece {
+  border-radius: 50%;
+  background-color: white;
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+.selected {
+  background-color: dodgerblue;
+}

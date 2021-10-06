@@ -1,0 +1,13 @@
+<table>
+    <ng-container *ngFor="let state of boardState; index as i">
+      <ng-container *ngIf="(i) % 8 == 0">
+        <tr>
+      </ng-container>
+  
+      <td *ngIf="board[i] == 0" class="white">{{ i }}</td>
+      <td *ngIf="board[i] == 1" class="black" (click)="makeMove(i)">
+        <div *ngIf="state != null && state >= 0 && state <= 11" class="blackpiece" [ngClass]="{'selected': state == selectedPieceID}" (click)="selectPiece(state, i); $event.stopPropagation()"></div>
+        <div *ngIf="state != null && state >= 12 && state <= 23" class="whitepiece" [ngClass]="{'selected': state == selectedPieceID}" (click)="selectPiece(state, i); $event.stopPropagation()"></div>
+      </td>
+    </ng-container>
+  </table>
